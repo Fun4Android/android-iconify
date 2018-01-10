@@ -5,9 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import com.joanzapata.iconify.Icon;
+
 
 public class IconAdapter extends RecyclerView.Adapter<IconAdapter.ViewHolder> {
 
@@ -39,8 +40,8 @@ public class IconAdapter extends RecyclerView.Adapter<IconAdapter.ViewHolder> {
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        @Bind(R.id.icon) TextView icon;
-        @Bind(R.id.name) TextView name;
+        @BindView(R.id.icon) TextView icon;
+        @BindView(R.id.name) TextView name;
 
         public ViewHolder(View itemView) {
             super(itemView);
