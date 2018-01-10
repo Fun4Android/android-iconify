@@ -14,7 +14,7 @@ Pick any number of modules and declare them in your `Application`.
 
 ```gradle
 dependencies {
-    compile 'com.joanzapata.iconify:android-iconify-fontawesome:2.2.2' // (v4.5)
+    compile 'com.joanzapata.iconify:android-iconify-fontawesome:2.2.2' // (v4.7; updated by bdevereaux on 01/10/2018)
     compile 'com.joanzapata.iconify:android-iconify-entypo:2.2.2' // (v3,2015)
     compile 'com.joanzapata.iconify:android-iconify-typicons:2.2.2' // (v2.0.7)
     compile 'com.joanzapata.iconify:android-iconify-material:2.2.2' // (v2.0.0)
