@@ -1,4 +1,24 @@
-# Note: Due to lack of time, Iconify is no longer maintained and icon packs are outdated. I'd be very happy to welcome a new contributor, please reach me on twitter [@JoanZap](https://twitter.com/joanzap) if by any chance you're interested. 🙂
+# Note: This is not the original Iconify project, but a fork that I have created with the intentions of updating the font packs that are most often used. The contents of this readme, as well as certain project assets have been modified to reflect the fact that this is not the original project. You can find the original Iconify project by Joan Zapata [here](https://github.com/joanzapata/android-iconify). All project namespaces/ usage will remain the same for the foreseeable future. Thank you so much to Joan Zapata for all of his hard work on this incredible project!
+
+# Update - 01/11/2018 - Fontawesome v4.7 is supported and a Snapshot has been deployed to sonatype. You can use this Snapshot by adding the following gradle dependencies:
+
+In your top level gradle project file:
+```
+allprojects {
+    repositories {
+        mavenCentral()
+        maven {
+            url 'https://oss.sonatype.org/content/repositories/snapshots'
+        }
+    }
+}
+```
+And in your application gradle file, add specific dependencies e.g.
+```
+dependencies {
+    compile 'com.blackboardtheory:android-iconify-fontawesome:3.0.1-SNAPSHOT'
+}
+```
 
 <img src="graphics/logo.jpg" height="154" align="center">
 
@@ -14,15 +34,15 @@ Pick any number of modules and declare them in your `Application`.
 
 ```gradle
 dependencies {
-    compile 'com.joanzapata.iconify:android-iconify-fontawesome:2.2.2' // (v4.7; updated by bdevereaux on 01/10/2018)
-    compile 'com.joanzapata.iconify:android-iconify-entypo:2.2.2' // (v3,2015)
-    compile 'com.joanzapata.iconify:android-iconify-typicons:2.2.2' // (v2.0.7)
-    compile 'com.joanzapata.iconify:android-iconify-material:2.2.2' // (v2.0.0)
-    compile 'com.joanzapata.iconify:android-iconify-material-community:2.2.2' // (v1.4.57)
-    compile 'com.joanzapata.iconify:android-iconify-meteocons:2.2.2' // (latest)
-    compile 'com.joanzapata.iconify:android-iconify-weathericons:2.2.2' // (v2.0)
-    compile 'com.joanzapata.iconify:android-iconify-simplelineicons:2.2.2' // (v1.0.0)
-    compile 'com.joanzapata.iconify:android-iconify-ionicons:2.2.2' // (v2.0.1)
+    compile 'com.blackboardtheory:android-iconify-fontawesome:3.0.1-SNAPSHOT' // (v4.7; updated by bdevereaux on 01/10/2018)
+    compile 'com.blackboardtheory:android-iconify-entypo:3.0.1-SNAPSHOT' // (v3,2015)
+    compile 'com.blackboardtheory:android-iconify-typicons:3.0.1-SNAPSHOT' // (v2.0.7)
+    compile 'com.blackboardtheory:android-iconify-material:3.0.1-SNAPSHOT' // (v2.0.0)
+    compile 'com.blackboardtheory:android-iconify-material-community:3.0.1-SNAPSHOT' // (v1.4.57)
+    compile 'com.blackboardtheory:android-iconify-meteocons:3.0.1-SNAPSHOT' // (latest)
+    compile 'com.blackboardtheory:android-iconify-weathericons:3.0.1-SNAPSHOT' // (v2.0)
+    compile 'com.blackboardtheory:android-iconify-simplelineicons:3.0.1-SNAPSHOT' // (v1.0.0)
+    compile 'com.blackboardtheory:android-iconify-ionicons:3.0.1-SNAPSHOT' // (v2.0.1)
 }
 ```
 
@@ -86,17 +106,19 @@ menu.findItem(R.id.share).setIcon(
 
 ## Extensibility
 
-In case you can't find the icon you want, you can extend the available icon directly from your app. All you need to do is to implement `IconFontDescriptor` with a `.ttf` file in your assets and provide the mapping between keys and special characters, then give it to `Iconify.with()`. You can use the  [FontAwesomeModule](https://github.com/JoanZapata/android-iconify/blob/master/android-iconify-fontawesome/src/main/java/com/joanzapata/iconify/fonts/FontAwesomeModule.java) as an example.
+In case you can't find the icon you want, you can extend the available icon directly from your app. All you need to do is to implement `IconFontDescriptor` with a `.ttf` file in your assets and provide the mapping between keys and special characters, then give it to `Iconify.with()`. You can use the  [FontAwesomeModule](https://github.com/bdevereaux/android-iconify/blob/master/android-iconify-fontawesome/src/main/java/com/joanzapata/iconify/fonts/FontAwesomeModule.java) as an example.
 
 There are no constraints on the icon keys, but I strongly suggest you use a unique prefix like `my-` or anything, to avoid conflicts with other modules. FYI, if there **is** a conflict, the first module declared with `Iconify.with()` has priority.
 
 The only dependency you need if you want to use a custom icon is Iconify core.
 
 ```gradle
-compile 'com.joanzapata.iconify:android-iconify:2.2.2'
+compile 'com.blackboardtheory:android-iconify:3.0.1-SNAPSHOT'
 ```
 
 -----
+
+# Thank You very much to the original contributors to this project!
 
 ## Contributions
 
@@ -107,7 +129,7 @@ compile 'com.joanzapata.iconify:android-iconify:2.2.2'
 ## License
 
 ```
-Copyright 2015 Joan Zapata
+Copyright 2018 Brandon Devereaux
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
