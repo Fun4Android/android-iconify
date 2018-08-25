@@ -18,9 +18,9 @@ subprojects {
 }
 
 ext {
-    androidPlugin = 'com.android.tools.build:gradle:3.0.1'
+    androidPlugin = 'com.android.tools.build:gradle:3.2.0-rc02'
     supportLibraryVersion = '27.0.2'
     minSdkVersion = 14
     compileSdkVersion = 27
-    buildToolsVersion = '27.0.3'
+    buildToolsVersion = '28.0.2'
 }

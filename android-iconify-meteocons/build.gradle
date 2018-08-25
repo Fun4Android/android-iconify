@@ -21,7 +21,7 @@ android {
 }
 
 dependencies {
-    compile project(':android-iconify')
+    implementation project(':android-iconify')
 }
 
 apply from: rootProject.file('gradle/gradle-mvn-push.gradle')

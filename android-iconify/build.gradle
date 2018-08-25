@@ -22,7 +22,7 @@ android {
 }
 
 dependencies {
-    compile "com.android.support:support-v4:$rootProject.ext.supportLibraryVersion"
+    implementation "com.android.support:support-v4:$rootProject.ext.supportLibraryVersion"
 }
 
 apply from: rootProject.file('gradle/gradle-mvn-push.gradle')
