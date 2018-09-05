@@ -1,14 +1,16 @@
 allprojects {
     repositories {
         google()
+        jcenter()
     }
 }
 
 subprojects {
     buildscript {
         repositories {
-            jcenter()
             google()
+            jcenter()
+            maven { url 'https://jitpack.io' }
         }
     }
 
@@ -18,7 +20,9 @@ subprojects {
 }
 
 ext {
+    kotlinVersion = '1.2.60'
     androidPlugin = 'com.android.tools.build:gradle:3.2.0-rc02'
+    kotlinPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}"
     supportLibraryVersion = '27.1.1'
     minSdkVersion = 14
     compileSdkVersion = 28
